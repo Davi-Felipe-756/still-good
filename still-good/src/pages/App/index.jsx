@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import reactLogo from '../../assets/react.svg'
 import appLogo from '/favicon.svg'
-import PWABadge from './PWABadge.jsx'
-import './App.css'
+import PWABadge from '../../components/PWABadge/index.jsx'
+import './index.css'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,7 +17,9 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      <a href="home">
       <h1>still-good</h1>
+      </a>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
