@@ -1,0 +1,65 @@
+.header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 16px;
+}
+
+.header h1 {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #183d20;
+}
+
+
+/* ===== CÍRCULOS ===== */
+
+.header-button {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+    cursor: pointer;
+}
+
+
+/* ===== ÍCONES ===== */
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+    line-height: 1;
+
+    color: #183d20;
+}
+
+.notification-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+    line-height: 1;
+}

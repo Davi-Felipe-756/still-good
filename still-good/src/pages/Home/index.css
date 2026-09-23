@@ -1,0 +1,97 @@
+.home {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #f7f8f5;
+    color: #183d20;
+}
+
+.home-content {
+    padding: 0 16px 90px;
+}
+
+
+/* ===== TÍTULOS ===== */
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 20px 0 10px;
+}
+
+.section-header h2 {
+    margin: 0;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    color: #183d20;
+}
+
+.section-header button {
+    border: none;
+    background: transparent;
+
+    color: #3d7045;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+/* ===== CATEGORIAS ===== */
+
+.categoria-list {
+    display: flex;
+    gap: 10px;
+}
+
+.categoria-item {
+    flex: 1;
+
+    min-height: 78px;
+
+    border: none;
+    border-radius: 14px;
+
+    padding: 10px 8px;
+
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    color: #183d20;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+    cursor: pointer;
+}
+
+.categoria-icon {
+    font-size: 25px;
+    line-height: 1;
+}
+
+.categoria-item > span:last-child {
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+/* ===== LISTA DE ALIMENTOS ===== */
+
+.item-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+}

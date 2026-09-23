@@ -1,0 +1,94 @@
+.bottom-nav {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 65px;
+
+    padding: 6px 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background: #17491f;
+
+    border-radius: 18px 18px 0 0;
+
+    z-index: 100;
+}
+
+
+/* ===== BOTÕES ===== */
+
+.bottom-nav-item {
+    min-width: 60px;
+
+    padding: 6px 10px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+/* ===== ÍCONES ===== */
+
+.bottom-icon {
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+
+/* ===== TEXTO ===== */
+
+.bottom-nav-item > span:last-child {
+    font-size: 8px;
+}
+
+
+/* ===== ITEM SELECIONADO ===== */
+
+.bottom-nav-item1.active {
+    background: rgba(255, 255, 255, 0.12);
+}
+.bottom-nav-item1 {
+    min-width: 60px;
+
+    padding: 6px 10px;
+
+    border: none;
+
+    background: darkgreen;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}

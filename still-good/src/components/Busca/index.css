@@ -1,0 +1,54 @@
+.busca {
+    width: 100%;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 14px;
+
+    margin-bottom: 18px;
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ===== LUPA ===== */
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+
+    line-height: 1;
+}
+
+
+/* ===== INPUT ===== */
+
+.busca input {
+    flex: 1;
+
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 10px;
+
+    color: #183d20;
+}
+
+.busca input::placeholder {
+    color: #999;
+}
