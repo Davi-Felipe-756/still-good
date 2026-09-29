@@ -1,42 +1,43 @@
 import Foodcard from '../Foodcard/index.jsx'
 import './index.css'
+import { GiSlicedBread, GiIceCube } from "react-icons/gi";
 
 const alimentos = [
     {
         nome: "Leite em pó",
         local: "Despensa",
         validade: "15/03/27",
-        icone: "🥛"
+        icone: <GiSlicedBread size={30} color="black" />
     },
     {
         nome: "Café",
         local: "Despensa",
         validade: "22/08/26",
-        icone: "☕"
+        icone: <GiSlicedBread size={30} color="black" />
     },
     {
         nome: "Queijo",
         local: "Geladeira",
         validade: "05/09/26",
-        icone: "🧀"
+        icone: <GiIceCube size={30} color="black" />
     },
     {
         nome: "Macarrão",
         local: "Despensa",
         validade: "10/12/27",
-        icone: "🍝"
+        icone: <GiSlicedBread size={30} color="black" />
     },
     {
         nome: "Bebida láctea",
         local: "Geladeira",
         validade: "30/01/27",
-        icone: "🥛"
+        icone: <GiIceCube size={30} color="black" />
     },
     {
         nome: "Farofa",
         local: "Despensa",
         validade: "18/06/28",
-        icone: "🥫"
+        icone: <GiSlicedBread size={30} color="black" />
     }
 ]
 

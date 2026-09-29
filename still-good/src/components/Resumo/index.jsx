@@ -1,4 +1,8 @@
 import './index.css'
+import { GiSlicedBread } from "react-icons/gi";
+import { CiWarning } from "react-icons/ci";
+
+
 
 export default function Resumo() {
     return (
@@ -6,7 +10,7 @@ export default function Resumo() {
 
             <div className="resumo-card">
 
-                <span className="resumo-icon">🥫</span>
+                <span className="resumo-icon"><GiSlicedBread size={30} color="black" /></span>
 
                 <div>
                     <strong>6 itens</strong>
@@ -18,7 +22,7 @@ export default function Resumo() {
 
             <div className="resumo-card">
 
-                <span className="resumo-icon">⚠️</span>
+                <span className="resumo-icon"><CiWarning /></span>
 
                 <div>
                     <strong>2 próximos</strong>

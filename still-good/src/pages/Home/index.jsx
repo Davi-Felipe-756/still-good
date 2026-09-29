@@ -18,33 +18,6 @@ export default function Home() {
                 <Busca />
 
                 {/* Categorias */}
-                <section className="categorias">
-
-                    <div className="section-header">
-                        <h2>Categorias</h2>
-                        <button>Ver todas</button>
-                    </div>
-
-                    <div className="categoria-list">
-
-                        <button className="categoria-item">
-                            <span className="categoria-icon">🧊</span>
-                            <span>Geladeira</span>
-                        </button>
-
-                        <button className="categoria-item">
-                            <span className="categoria-icon">🥫</span>
-                            <span>Despensa</span>
-                        </button>
-
-                        <button className="categoria-item">
-                            <span className="categoria-icon">❄️</span>
-                            <span>Freezer</span>
-                        </button>
-
-                    </div>
-
-                </section>
 
                 {/* Lista de alimentos */}
                 <Listaalimentos />

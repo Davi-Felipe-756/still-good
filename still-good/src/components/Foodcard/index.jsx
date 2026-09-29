@@ -1,5 +1,4 @@
 import './index.css'
-
 export default function Foodcard({
     icone,
     nome,

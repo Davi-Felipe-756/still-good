@@ -10,12 +10,3 @@ createRoot(document.getElementById('root')).render(
     <AppRoutes />
   </StrictMode>,
 )
-
- Return( <>
- 
-      
-
-        <Home/>
- </>
-
- )
