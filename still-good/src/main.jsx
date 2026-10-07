@@ -4,6 +4,7 @@ import './styles/global.css'
 import './styles/variables.css'
 import AppRoutes from './routes/AppRoutes.jsx'
 import Home from './pages/Home/index.jsx'
+import Login from './pages/Login/index.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
