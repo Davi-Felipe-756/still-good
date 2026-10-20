@@ -1,0 +1,78 @@
+.aparencia {
+    padding: 18px 0;
+    border-bottom: 1px solid #a9a18f;
+}
+
+.aparencia h2 {
+    margin-bottom: 14px;
+}
+
+.tema-linha,
+.cores-linha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.tema-linha strong,
+.cores-linha strong {
+    font-size: 11px;
+}
+
+.tema-botoes {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #888;
+}
+
+.tema-botoes button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 7px 6px;
+    border: none;
+    background: #fff;
+    color: #555;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.tema-botoes button:first-child {
+    background: #292929;
+    color: white;
+}
+
+.tema-botoes button:last-child {
+    background: #dce8ce;
+    color: #222;
+}
+
+.tema-botoes button.tema-selecionado {
+    outline: 1px solid #405c45;
+    outline-offset: -2px;
+    font-weight: bold;
+}
+
+.cores-linha {
+    margin-top: 12px;
+}
+
+.paleta-cores {
+    display: flex;
+    gap: 7px;
+}
+
+.paleta-cores button {
+    width: 13px;
+    height: 13px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.paleta-cores button.cor-selecionada {
+    outline: 1px solid #111;
+    outline-offset: 2px;
+}

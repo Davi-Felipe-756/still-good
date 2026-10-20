@@ -47,9 +47,13 @@ export default function LoginForm() {
                 Entrar
             </button>
 
-            <button type="button" className="register-button">
-                Criar conta
-            </button>
+            <button
+    type="button"
+    className="entrar-button"
+    onClick={() => window.location.href = "/Cadastro"}
+>
+ Criar conta
+</button>
         </form>
     )
 }

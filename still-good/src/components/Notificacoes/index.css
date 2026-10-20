@@ -1,0 +1,98 @@
+.notificacoes {
+    padding: 14px 0 16px;
+    border-bottom: 1px solid #a9a18f;
+}
+
+.notificacoes h2,
+.aparencia h2,
+.configuracoes-perfil h2 {
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.notificacao-linha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.notificacao-texto {
+    flex: 1;
+}
+
+.notificacao-texto strong {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+.notificacao-texto p {
+    font-size: 9px;
+    line-height: 1.4;
+    color: #777;
+}
+
+.interruptor {
+    width: 33px;
+    height: 19px;
+    border: none;
+    border-radius: 15px;
+    background: #aaa;
+    padding: 2px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.interruptor span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    transition: transform 0.2s;
+}
+
+.interruptor.ligado {
+    background: #35d653;
+}
+
+.interruptor.ligado span {
+    transform: translateX(14px);
+}
+
+.dias-lista {
+    display: flex;
+    gap: 5px;
+    margin-top: 12px;
+}
+
+.dia {
+    min-width: 0;
+    flex: 1;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 0 4px;
+    border: none;
+    border-radius: 7px;
+    background: #d8d4c7;
+    color: #555;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.dia.ativo {
+    background: #203f25;
+    color: white;
+    outline: 1px solid #69a76d;
+}
+
+.adicionar-dia {
+    background: #203f25;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}

@@ -1,0 +1,42 @@
+.perfil-header {
+    width: 100%;
+    height: 103px;
+    padding: 15px 9px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #405c45;
+    border-bottom: 3px solid #203b27;
+    color: white;
+}
+
+.perfil-avatar {
+    width: 52px;
+    height: 52px;
+    color: white;
+    background: #405c45;
+    flex-shrink: 0;
+}
+
+.perfil-identificacao {
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-identificacao small {
+    font-size: 9px;
+}
+
+.perfil-identificacao h1 {
+    font-size: 17px;
+    margin: 2px 0 0;
+}
+
+.editar-perfil {
+    margin-left: 0;
+    border: none;
+    background: transparent;
+    color: black;
+    font-size: 22px;
+    cursor: pointer;
+}

@@ -1,0 +1,13 @@
+.perfil-page {
+    width: 100%;
+    min-height: 956px;
+    background: #fbf5e6;
+    font-family: Arial, sans-serif;
+    color: #111;
+    padding-bottom: 75px;
+}
+
+.perfil-content {
+    width: 100%;
+    padding: 0 10px;
+}

@@ -1,31 +1,34 @@
+import { FaMobileAlt, FaBookOpen, FaUser } from 'react-icons/fa'
 import './index.css'
-import { GiCannedFish } from "react-icons/gi";
-import { FaBook } from "react-icons/fa";
-import { MdAccountCircle } from "react-icons/md";
-
 
 export default function BottomNav() {
     return (
         <nav className="bottom-nav">
-
-            <button className="bottom-nav-item1">
-                <span className="bottom-icon1"><GiCannedFish />
-</span>
+            <button
+                type="button"
+                className="bottom-nav-item"
+                onClick={() => window.location.href = '/home'}
+            >
+                <FaMobileAlt />
                 <span>Despensa</span>
             </button>
 
-            <button className="bottom-nav-item">
-                <span className="bottom-icon"><FaBook />
-</span>
+            <button
+                type="button"
+                className="bottom-nav-item"
+                onClick={() => window.location.href = '/receitas'}
+            >
+                <FaBookOpen />
                 <span>Receitas</span>
             </button>
 
-            <button className="bottom-nav-item">
-                <span className="bottom-icon"><MdAccountCircle />
-</span>
+            <button
+                type="button"
+                className="bottom-nav-item active"
+            >
+                <FaUser />
                 <span>Perfil</span>
             </button>
-
         </nav>
     )
 }
