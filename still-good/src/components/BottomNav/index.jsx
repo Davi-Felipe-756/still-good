@@ -1,12 +1,12 @@
 import { FaMobileAlt, FaBookOpen, FaUser } from 'react-icons/fa'
 import './index.css'
 
-export default function BottomNav() {
+export default function BottomNav({ active = 'profile' }) {
     return (
         <nav className="bottom-nav">
             <button
                 type="button"
-                className="bottom-nav-item"
+                className={`bottom-nav-item${active === 'home' ? ' active' : ''}`}
                 onClick={() => window.location.href = '/home'}
             >
                 <FaMobileAlt />
@@ -24,7 +24,8 @@ export default function BottomNav() {
 
             <button
                 type="button"
-                className="bottom-nav-item active"
+                className={`bottom-nav-item${active === 'profile' ? ' active' : ''}`}
+                onClick={() => window.location.href = '/perfil'}
             >
                 <FaUser />
                 <span>Perfil</span>

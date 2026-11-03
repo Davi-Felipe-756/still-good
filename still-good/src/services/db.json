@@ -1,0 +1,35 @@
+{
+  "usuario": {
+    "id": "user-igor",
+    "username": "tiba2030",
+    "nome": "igor",
+    "email": "igorssilvadossantos604@gmail.com",
+    "stats": {
+      "experiencePoints": 450,
+      "completedMissions": 5
+    }
+  },
+  "alimentos": [
+    {
+      "id": "leite em pó",
+      "nome": "Lente em pó",
+      "local": "Despensa",
+      "validade": "2026-11-03"
+    },
+    {
+      "id": "leite",
+      "nome": "leite",
+      "local": "Geladeira",
+      "validade": "2027-04-13"
+    },
+    {
+      "id": "sorvete",
+      "nome": "sorvete",
+      "local": "friser",
+      "validade": "2027-10-13"
+    }
+  ],
+  "ongs": [],
+  "quantidades": [1, 5, 2],
+  "ingredientes": []
+}

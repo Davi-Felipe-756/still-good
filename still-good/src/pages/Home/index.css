@@ -1,56 +1,109 @@
 .home {
     width: 100%;
     min-height: 100vh;
-
     background: #FBF5E5;
     color: #183d20;
 }
 
 .home-content {
-    padding: 0 16px 90px;
+    width: min(100%, 980px);
+    margin: 0 auto;
+    padding: 0 20px 96px;
 }
-
-
-/* ===== TÍTULOS ===== */
 
 .section-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    margin: 20px 0 10px;
+    margin: 26px 0 14px;
 }
 
 .section-header h2 {
     margin: 0;
-
-    font-size: 15px;
+    font-size: 19px;
     font-weight: 700;
-
     color: #183d20;
 }
 
-.section-header button {
-    border: none;
-    background: transparent;
-
-    color: #3d7045;
-
-    font-size: 10px;
-
-    cursor: pointer;
+.profile-summary {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px;
+    margin: 4px 0 18px;
+    background: #fffaf1;
+    border: 1px solid #eee6d4;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(24, 61, 32, 0.06);
 }
 
-
-/* ===== CATEGORIAS ===== */
-
-
-/* ===== LISTA DE ALIMENTOS ===== */
-
-.item-list {
+.profile-avatar {
     display: grid;
+    place-items: center;
+    width: 68px;
+    height: 68px;
+    flex: 0 0 68px;
+    border-radius: 50%;
+    background: #17491f;
+    color: #fffaf1;
+    font-size: 28px;
+    font-weight: 700;
+}
 
-    grid-template-columns: repeat(2, 1fr);
+.profile-details {
+    min-width: 0;
+}
 
-    gap: 10px;
+.profile-eyebrow {
+    color: #638367;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.profile-details h2 {
+    margin: 3px 0;
+    font-size: 23px;
+    text-transform: capitalize;
+}
+
+.profile-details p {
+    margin: 3px 0;
+    color: #607064;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.profile-id {
+    display: inline-block;
+    margin-top: 8px;
+    color: #78827a;
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    .home-content {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+
+    .profile-summary {
+        gap: 13px;
+        padding: 17px;
+    }
+
+    .profile-avatar {
+        width: 54px;
+        height: 54px;
+        flex-basis: 54px;
+    }
+
+    .profile-details h2 {
+        font-size: 20px;
+    }
+
+    .profile-details p {
+        font-size: 12px;
+    }
 }

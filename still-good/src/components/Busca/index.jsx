@@ -1,18 +1,17 @@
 import './index.css'
-import { FaSearch } from "react-icons/fa";
+import { FaSearch } from 'react-icons/fa'
 
-export default function Busca() {
+export default function Busca({ value, onChange }) {
     return (
-        <div className="busca">
-
+        <label className="busca">
             <span className="search-icon"><FaSearch />
-</span>
-
+            </span>
             <input
                 type="text"
                 placeholder="Buscar alimentos..."
+                value={value}
+                onChange={(event) => onChange(event.target.value)}
             />
-
-        </div>
+        </label>
     )
 }

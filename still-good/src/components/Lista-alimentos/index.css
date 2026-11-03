@@ -2,10 +2,23 @@
     width: 100%;
 }
 
+.food-count {
+    color: #718174;
+    font-size: 13px;
+}
+
 .item-list {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 14px;
+}
 
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 10px;
+.empty-food-list {
+    grid-column: 1 / -1;
+    padding: 24px;
+    color: #718174;
+    text-align: center;
+    background: #fffaf6;
+    border: 1px dashed #d8dfd4;
+    border-radius: 14px;
 }
