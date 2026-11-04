@@ -4,32 +4,125 @@
     "username": "tiba2030",
     "nome": "igor",
     "email": "igorssilvadossantos604@gmail.com",
+    "senha": "vrum_vrum",
     "stats": {
       "experiencePoints": 450,
       "completedMissions": 5
-    }
+    },
+    "alimentos": [
+      {
+        "id": "leite em pó",
+        "nome": "Lente em pó",
+        "local": "Despensa",
+        "validade": "2026-11-03"
+      },
+      {
+        "id": "leite",
+        "nome": "leite",
+        "local": "Geladeira",
+        "validade": "2027-04-13"
+      },
+      {
+        "id": "sorvete",
+        "nome": "sorvete",
+        "local": "Freezer",
+        "validade": "2027-10-13"
+      }
+    ]
   },
-  "alimentos": [
+  "usuario2": {
+    "id": "user-davi",
+    "username": "DV3003",
+    "nome": "Davi",
+    "email": "davi300707@gmail.com",
+    "senha": "ULTRAKILL",
+    "stats": {
+      "experiencePoints": 300,
+      "completedMissions": 2
+    },
+    "alimentos": [
+      {
+        "id": "fubá",
+        "nome": "fubá",
+        "local": "Despensa",
+        "validade": "2026-11-09"
+      },
+      {
+        "id": "ovo",
+        "nome": "ovo",
+        "local": "Geladeira",
+        "validade": "2027-05-13"
+      },
+      {
+        "id": "salsicha",
+        "nome": "salsicha",
+        "local": "Freezer",
+        "validade": "2027-11-13"
+      }
+    ]
+  },
+  "usuarios": [
     {
-      "id": "leite em pó",
-      "nome": "Lente em pó",
-      "local": "Despensa",
-      "validade": "2026-11-03"
+      "id": "user-igor",
+      "username": "tiba2030",
+      "nome": "igor",
+      "email": "igorssilvadossantos604@gmail.com",
+      "senha": "vrum_vrum",
+      "stats": {
+        "experiencePoints": 450,
+        "completedMissions": 5
+      },
+      "alimentos": [
+        {
+          "id": "leite em pó",
+          "nome": "Lente em pó",
+          "local": "Despensa",
+          "validade": "2026-11-03"
+        },
+        {
+          "id": "leite",
+          "nome": "leite",
+          "local": "Geladeira",
+          "validade": "2027-04-13"
+        },
+        {
+          "id": "sorvete",
+          "nome": "sorvete",
+          "local": "Freezer",
+          "validade": "2027-10-13"
+        }
+      ]
     },
     {
-      "id": "leite",
-      "nome": "leite",
-      "local": "Geladeira",
-      "validade": "2027-04-13"
-    },
-    {
-      "id": "sorvete",
-      "nome": "sorvete",
-      "local": "friser",
-      "validade": "2027-10-13"
+      "id": "user-davi",
+      "username": "DV3003",
+      "nome": "Davi",
+      "email": "davi300707@gmail.com",
+      "senha": "ULTRAKILL",
+      "stats": {
+        "experiencePoints": 300,
+        "completedMissions": 2
+      },
+      "alimentos": [
+        {
+          "id": "fubá",
+          "nome": "fubá",
+          "local": "Despensa",
+          "validade": "2026-11-09"
+        },
+        {
+          "id": "ovo",
+          "nome": "ovo",
+          "local": "Geladeira",
+          "validade": "2027-05-13"
+        },
+        {
+          "id": "salsicha",
+          "nome": "salsicha",
+          "local": "Freezer",
+          "validade": "2027-11-13"
+        }
+      ]
     }
-  ],
-  "ongs": [],
-  "quantidades": [1, 5, 2],
-  "ingredientes": []
+  ]
 }

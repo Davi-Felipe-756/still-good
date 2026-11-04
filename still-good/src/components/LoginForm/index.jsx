@@ -1,9 +1,18 @@
-import { FaUser, FaLock  } from "react-icons/fa";
+import { FaUser, FaLock } from "react-icons/fa";
 import LoginInput from '../LoginInput'
+import dados from '../../services/db.json'
 import './index.css'
 
 function authenticate(email, password) {
-    return email.trim() !== '' && password.trim() !== ''
+    const contas = Array.isArray(dados.usuarios)
+        ? dados.usuarios
+        : [dados.usuario, dados.usuario2].filter(Boolean)
+
+    return contas.some((conta) => {
+        const emailValido = String(conta.email ?? '').trim().toLowerCase() === String(email ?? '').trim().toLowerCase()
+        const senhaValida = String(conta.senha ?? '').trim() === String(password ?? '').trim()
+        return emailValido && senhaValida
+    })
 }
 
 export default function LoginForm() {
@@ -15,10 +24,25 @@ export default function LoginForm() {
         const password = String(formData.get('password') ?? '')
 
         if (authenticate(email, password)) {
-            window.location.href = "/home";
-        } else{
-            console.log("erro login")
+            const contas = Array.isArray(dados.usuarios)
+                ? dados.usuarios
+                : [dados.usuario, dados.usuario2].filter(Boolean)
+
+            const conta = contas.find((usuario) => {
+                return (
+                    String(usuario.email ?? '').trim().toLowerCase() === email.trim().toLowerCase() &&
+                    String(usuario.senha ?? '').trim() === password.trim()
+                )
+            })
+
+            if (conta) {
+                localStorage.setItem('usuarioLogadoId', conta.id)
+                window.location.href = "/home"
+                return
+            }
         }
+
+        console.log('erro login')
     }
 
     return (
@@ -48,12 +72,12 @@ export default function LoginForm() {
             </button>
 
             <button
-    type="button"
-    className="entrar-button"
-    onClick={() => window.location.href = "/Cadastro"}
->
- Criar conta
-</button>
+                type="button"
+                className="entrar-button"
+                onClick={() => window.location.href = "/Cadastro"}
+            >
+                Criar conta
+            </button>
         </form>
     )
 }
