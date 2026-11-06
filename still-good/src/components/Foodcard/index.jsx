@@ -7,8 +7,9 @@ export default function Foodcard({
     local,
     validade
 }) {
-    const [ano, mes, dia] = validade.split('-')
-    const validadeFormatada = `${dia}/${mes}/${ano}`
+    const validadeFormatada = validade?.includes('-')
+        ? validade.split('-').reverse().join('/')
+        : validade || 'Não informada'
 
     return (
         <article className="food-card">

@@ -27,6 +27,36 @@
         "nome": "sorvete",
         "local": "Freezer",
         "validade": "2027-10-13"
+      },
+      {
+        "id": "milho-verde",
+        "nome": "milho verde",
+        "local": "Não informado",
+        "validade": "Não informada"
+      },
+      {
+        "id": "ovos",
+        "nome": "ovos",
+        "local": "Não informado",
+        "validade": "Não informada"
+      },
+      {
+        "id": "acucar",
+        "nome": "açúcar",
+        "local": "Não informado",
+        "validade": "Não informada"
+      },
+      {
+        "id": "oleo",
+        "nome": "óleo",
+        "local": "Não informado",
+        "validade": "Não informada"
+      },
+      {
+        "id": "fuba",
+        "nome": "fubá",
+        "local": "Não informado",
+        "validade": "Não informada"
       }
     ]
   },
@@ -90,6 +120,36 @@
           "nome": "sorvete",
           "local": "Freezer",
           "validade": "2027-10-13"
+        },
+        {
+          "id": "milho-verde",
+          "nome": "milho verde",
+          "local": "Não informado",
+          "validade": "Não informada"
+        },
+        {
+          "id": "ovos",
+          "nome": "ovos",
+          "local": "Não informado",
+          "validade": "Não informada"
+        },
+        {
+          "id": "acucar",
+          "nome": "açúcar",
+          "local": "Não informado",
+          "validade": "Não informada"
+        },
+        {
+          "id": "oleo",
+          "nome": "óleo",
+          "local": "Não informado",
+          "validade": "Não informada"
+        },
+        {
+          "id": "fuba",
+          "nome": "fubá",
+          "local": "Não informado",
+          "validade": "Não informada"
         }
       ]
     },

@@ -15,7 +15,7 @@ export default function BottomNav({ active = 'profile' }) {
 
             <button
                 type="button"
-                className="bottom-nav-item"
+                className={`bottom-nav-item${active === 'receitas' ? ' active' : ''}`}
                 onClick={() => window.location.href = '/receitas'}
             >
                 <FaBookOpen />

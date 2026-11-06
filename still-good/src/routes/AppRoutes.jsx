@@ -4,6 +4,7 @@
  import Login from '../pages/Login/index.jsx';
  import Cadastro from "../pages/Cadastro/index.jsx";
  import Perfil from '../pages/Perfil/index.jsx';
+ import Receitas from '../pages/Reseita/index.jsx';
 export default function AppRoutes() {
     return(
 <>  
@@ -16,6 +17,8 @@ export default function AppRoutes() {
                   <Route path= '/Cadastro' element={<Cadastro />}/>
                 <Route path= '/home' element={<Home />}/>
                 <Route path="/perfil" element={<Perfil />} />
+                <Route path="/receitas" element={<Receitas />} />
+                <Route path="/receitas/:id" element={<Receitas />} />
              </Routes>   
         
         </Router>
