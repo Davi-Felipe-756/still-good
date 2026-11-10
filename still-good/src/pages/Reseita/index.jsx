@@ -7,7 +7,7 @@ import './index.css'
 const receitas = [
     {
         id: 'bolo-de-milho', nome: 'Bolo de milho', categoria: 'Para o café', tempo: '50 min',
-        imagem: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85',
+        imagem: 'https://static.itdg.com.br/images/640-360/446af21d3d276ba3a12fdc26f5e43227/252433-shutterstock-1989493415-1-.jpg',
         ingredientes: ['2 xícaras de milho verde', '1 xícara de leite', '3 ovos', '1½ xícara de açúcar', '½ xícara de óleo', '1 xícara de fubá', '1 colher (sopa) de fermento'],
         preparo: ['Preaqueça o forno a 180 °C e unte uma forma.', 'Bata no liquidificador o milho, o leite, os ovos, o açúcar e o óleo até ficar homogêneo.', 'Acrescente o fubá e bata rapidamente. Misture o fermento com uma espátula.', 'Despeje na forma e asse por cerca de 40 minutos, até dourar e passar no teste do palito.']
     },
@@ -18,7 +18,7 @@ const receitas = [
         preparo: ['Preaqueça o forno a 180 °C e unte uma forma.', 'Misture a farinha, o açúcar e o chocolate em uma tigela.', 'Junte os ovos, o leite e o óleo e mexa até obter uma massa lisa.', 'Incorpore o fermento delicadamente e asse por 35 a 40 minutos.']
     },
     {
-        id: 'cuscuz-com-ovo', nome: 'Cuscuz com ovo', categoria: 'Rápido e caseiro', tempo: '20 min',
+        id: 'pao-com-ovo', nome: 'Pão com ovo', categoria: 'Rápido e caseiro', tempo: '20 min',
         imagem: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1000&q=85',
         ingredientes: ['1 xícara de flocão de milho', '½ xícara de água', '1 pitada de sal', '2 ovos', '1 colher (chá) de manteiga'],
         preparo: ['Misture o flocão com a água e o sal. Deixe hidratar por 5 minutos.', 'Coloque a massa na cuscuzeira sem apertar e cozinhe no vapor por cerca de 10 minutos.', 'Aqueça a manteiga em uma frigideira e prepare os ovos como preferir.', 'Sirva o cuscuz ainda quente com os ovos por cima.']

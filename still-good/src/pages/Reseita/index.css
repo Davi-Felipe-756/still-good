@@ -232,10 +232,22 @@
     .recipes-header h1, .recipe-detail-content h1 { font-size: 34px; }
     .recipes-header p { font-size: 14px; }
     .recipe-grid { grid-template-columns: 1fr; gap: 14px; }
-    .recipe-card { display: grid; grid-template-columns: 42% minmax(0, 1fr); min-height: 142px; }
+    .recipe-card {
+        min-height: 142px;
+    }
+    .recipe-card-link {
+        display: grid;
+        grid-template-columns: 42% minmax(0, 1fr);
+        align-items: stretch;
+    }
     .recipe-card-image-wrap { height: 100%; min-height: 142px; }
     .recipe-card-time { right: 7px; bottom: 7px; padding: 6px 7px; font-size: 10px; }
-    .recipe-card-info { padding: 14px 12px; }
+    .recipe-card-info {
+        padding: 14px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     .recipe-card-info h2 { margin: 5px 0 11px; font-size: 18px; }
     .recipe-card-info > span:first-child { font-size: 9px; }
     .recipe-card-action { padding-top: 9px; font-size: 12px; }
