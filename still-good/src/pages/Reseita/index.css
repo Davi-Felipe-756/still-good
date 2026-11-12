@@ -4,7 +4,7 @@
     --recipe-green: #315b43;
     --recipe-orange: #d97742;
     min-height: 100vh;
-    background: #f7f5ed;
+    background: #f5e6e8;
     color: var(--recipe-ink);
     font-family: "DM Sans", "Trebuchet MS", sans-serif;
 }

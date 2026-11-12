@@ -2,12 +2,11 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 65px;
-    margin-bottom: 65px;
+    margin: 0 0 36px;
 }
 
 .login-header img {
-    width: 280px;
+    width: 220px;
     height: auto;
     object-fit: contain;
 }

@@ -1,15 +1,16 @@
 .login-page {
     width: 100%;
-    min-height: 956px;
-    padding: 0 10px 30px;
+    min-height: 100vh;
+    padding: 24px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #fbf5e6;
+    justify-content: center;
+    background: #f5e6e8;
     font-family: Arial, sans-serif;
 }
 
 .login-content {
     width: 100%;
-    max-width: 440px;
+    max-width: 360px;
 }
