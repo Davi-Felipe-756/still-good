@@ -1,8 +1,8 @@
 .home {
     width: 100%;
     min-height: 100vh;
-    background: #f5e6e8;
-    color: #183d20;
+    background: var(--page-background);
+    color: var(--text-color);
 }
 
 .home-content {
@@ -22,7 +22,7 @@
     margin: 0;
     font-size: 19px;
     font-weight: 700;
-    color: #183d20;
+    color: var(--text-color);
 }
 
 .profile-summary {
@@ -31,7 +31,7 @@
     gap: 18px;
     padding: 22px;
     margin: 4px 0 18px;
-    background: #fffaf1;
+    background: var(--warm-surface);
     border: 1px solid #eee6d4;
     border-radius: 20px;
     box-shadow: 0 8px 24px rgba(24, 61, 32, 0.06);

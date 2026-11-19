@@ -14,7 +14,7 @@
     font-size: 18px;
     font-weight: 700;
 
-    color: #183d20;
+    color: var(--text-color);
 }
 
 
@@ -30,7 +30,7 @@
     border: none;
     border-radius: 50%;
 
-    background: #ffffff;
+    background: var(--card-background);
 
     display: flex;
     align-items: center;
@@ -52,7 +52,7 @@
     font-size: 26px;
     line-height: 1;
 
-    color: #183d20;
+    color: var(--text-color);
 }
 
 .notification-icon {
@@ -62,5 +62,5 @@
 
     font-size: 21px;
     line-height: 1;
-    color: #183d20;
+    color: var(--text-color);
 }

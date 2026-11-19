@@ -7,7 +7,7 @@
     padding: 0 8px;
     border: 2px solid #111;
     border-radius: 25px;
-    background: #fff7f7;
+    background: var(--soft-pink-surface);
 }
 
 .login-input svg {

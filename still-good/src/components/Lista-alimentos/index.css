@@ -18,7 +18,7 @@
     padding: 24px;
     color: #718174;
     text-align: center;
-    background: #fffaf6;
+    background: var(--soft-pink-surface);
     border: 1px dashed #d8dfd4;
     border-radius: 14px;
 }

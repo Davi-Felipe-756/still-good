@@ -1,9 +1,9 @@
 .perfil-page {
     width: 100%;
     min-height: 956px;
-    background: #f5e6e8; 
+    background: var(--page-background);
     font-family: Arial, sans-serif;
-    color: #111;
+    color: var(--text-color);
     padding-bottom: 75px;
 }
 

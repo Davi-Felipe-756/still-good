@@ -5,7 +5,7 @@
   text-align: center;
 }
 body{
-  background-color: #f5e6e8
+  background-color: var(--page-background)
 }
 
 .logo {

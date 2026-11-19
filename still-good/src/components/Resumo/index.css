@@ -10,7 +10,7 @@
     min-width: 0;
     min-height: 82px;
     padding: 14px;
-    background: #ffffff;
+    background: var(--card-background);
     border: 1px solid #eee;
     border-radius: 16px;
     display: flex;
@@ -30,7 +30,7 @@
     line-height: 1;
     color: #17491f;
     border-radius: 12px;
-    background: #edf4ea;
+    background: var(--soft-green-surface);
 }
 
 .resumo-card div {
@@ -41,7 +41,7 @@
 
 .resumo-card strong {
     font-size: 18px;
-    color: #183d20;
+    color: var(--text-color);
 }
 
 .resumo-card small {

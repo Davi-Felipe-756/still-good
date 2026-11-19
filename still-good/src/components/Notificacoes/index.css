@@ -1,6 +1,6 @@
 .notificacoes {
     padding: 14px 0 16px;
-    border-bottom: 1px solid #a9a18f;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .notificacoes h2,
@@ -30,7 +30,7 @@
 .notificacao-texto p {
     font-size: 9px;
     line-height: 1.4;
-    color: #777;
+    color: var(--muted-text-color);
 }
 
 .interruptor {
@@ -78,7 +78,7 @@
     padding: 0 4px;
     border: none;
     border-radius: 7px;
-    background: #d8d4c7;
+    background: var(--inactive-day-background);
     color: #555;
     font-size: 9px;
     cursor: pointer;

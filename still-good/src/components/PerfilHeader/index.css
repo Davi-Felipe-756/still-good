@@ -5,8 +5,8 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #405c45;
-    border-bottom: 3px solid #203b27;
+    background: var(--header-background);
+    border-bottom: 3px solid var(--header-border);
     color: white;
 }
 

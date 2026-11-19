@@ -1,16 +1,54 @@
 @import url('./fonts.css');
 :root {
   --primary-color: #00ff00;
+  --page-background: #f5e6e8;
+  --surface-background: #f7f8f5;
+  --text-color: #111111;
+  --muted-text-color: #777777;
+  --border-color: #a9a18f;
+  --header-background: #405c45;
+  --header-border: #203b27;
+  --nav-background: #17491f;
+  --theme-button-background: #dce8ce;
+  --card-background: #ffffff;
+  --recipe-surface: #fffefa;
+  --inactive-day-background: #d8d4c7;
+  --warm-surface: #fffbf2;
+  --soft-green-surface: #eef5eb;
+  --soft-pink-surface: #fff9f5;
 
   font-family: "Finger Paint", sans-serif;
   font-weight: 400;
   font-style: normal;
 
-  color-scheme: light dark;
-  background-color: #242424;
+  color-scheme: light;
+  background-color: var(--surface-background);
+  color: var(--text-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+:root[data-theme='escuro'] {
+  --primary-color: #69a76d;
+  --page-background: #171b18;
+  --surface-background: #242824;
+  --text-color: #ffffff;
+  --muted-text-color: #ffffff;
+  --border-color: #555b55;
+  --header-background: #203b27;
+  --header-border: #101d13;
+  --nav-background: #102d16;
+  --theme-button-background: #405c45;
+  --card-background: #303630;
+  --recipe-surface: #1F2937;
+  --inactive-day-background: #1F2937;
+  --warm-surface: #1C1921;
+  --soft-green-surface: #1C1921;
+  --soft-pink-surface: #1C1921;
+
+  color-scheme: dark;
+  background-color: var(--surface-background);
+  color: var(--text-color);
 }

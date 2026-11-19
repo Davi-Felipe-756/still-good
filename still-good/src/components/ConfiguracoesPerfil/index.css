@@ -10,7 +10,7 @@
     justify-content: space-between;
     gap: 8px;
     border: none;
-    border-bottom: 1px solid #a9a18f;
+    border-bottom: 1px solid var(--border-color);
     background: transparent;
     cursor: pointer;
 }
@@ -29,7 +29,7 @@
 
 .idioma-valor {
     font-size: 9px;
-    color: #777;
+    color: var(--muted-text-color);
 }
 
 .sobre {

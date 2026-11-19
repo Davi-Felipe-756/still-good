@@ -3,10 +3,18 @@ import { FaMoon, FaSun } from 'react-icons/fa'
 import './index.css'
 
 export default function Aparencia() {
-    const [tema, setTema] = useState('claro')
+    const [tema, setTema] = useState(
+        document.documentElement.dataset.theme === 'escuro' ? 'escuro' : 'claro'
+    )
     const [cor, setCor] = useState('#171717')
 
     const cores = ['#171717', '#7587c4', '#29218d', '#a72d55']
+
+    const alterarTema = (novoTema) => {
+        setTema(novoTema)
+        document.documentElement.dataset.theme = novoTema
+        localStorage.setItem('still-good-theme', novoTema)
+    }
 
     return (
         <section className="aparencia">
@@ -19,7 +27,7 @@ export default function Aparencia() {
                     <button
                         type="button"
                         className={tema === 'escuro' ? 'tema-selecionado' : ''}
-                        onClick={() => setTema('escuro')}
+                        onClick={() => alterarTema('escuro')}
                     >
                         <FaMoon /> Escuro
                     </button>
@@ -27,7 +35,7 @@ export default function Aparencia() {
                     <button
                         type="button"
                         className={tema === 'claro' ? 'tema-selecionado' : ''}
-                        onClick={() => setTema('claro')}
+                        onClick={() => alterarTema('claro')}
                     >
                         <FaSun /> Claro
                     </button>
