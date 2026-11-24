@@ -2,7 +2,6 @@ import './index.css'
 
 export default function Foodcard({
     icone,
-    id,
     nome,
     local,
     validade
@@ -22,7 +21,6 @@ export default function Foodcard({
             </div>
             <div className="food-info">
                 <p><strong>Validade:</strong> {validadeFormatada}</p>
-                <p><strong>ID:</strong> {id}</p>
             </div>
         </article>
     )

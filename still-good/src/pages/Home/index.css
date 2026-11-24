@@ -82,10 +82,86 @@
     font-size: 12px;
 }
 
+.add-food-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin: 18px 0 8px;
+}
+
+.add-food-button,
+.save-food-button {
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 10px;
+    background: #17491f;
+    color: #fffaf1;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.add-food-button:hover,
+.save-food-button:hover {
+    background: #23652d;
+}
+
+.add-food-form {
+    display: grid;
+    gap: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: var(--warm-surface);
+    border: 1px solid #eee6d4;
+    border-radius: 16px;
+}
+
+.add-food-form h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.add-food-form label {
+    display: grid;
+    gap: 6px;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.add-food-form input,
+.add-food-form select {
+    width: 100%;
+    min-height: 42px;
+    padding: 9px 11px;
+    border: 1px solid #cbd6c9;
+    border-radius: 8px;
+    background: var(--page-background);
+    color: var(--text-color);
+    font: inherit;
+}
+
+.add-food-form input:focus,
+.add-food-form select:focus {
+    outline: 2px solid #638367;
+    outline-offset: 1px;
+}
+
+.save-food-button {
+    justify-self: start;
+}
+
 @media (max-width: 480px) {
     .home-content {
         padding-right: 14px;
         padding-left: 14px;
+    }
+
+    .add-food-actions {
+        justify-content: stretch;
+    }
+
+    .add-food-button {
+        width: 100%;
     }
 
     .profile-summary {

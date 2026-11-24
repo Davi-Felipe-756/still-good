@@ -21,7 +21,6 @@ export default function Listaalimentos({ alimentos, busca }) {
                     <Foodcard
                         key={alimento.id}
                         icone={alimento.local === 'Geladeira' ? <GiIceCube /> : <GiSlicedBread />}
-                        id={alimento.id}
                         nome={alimento.nome}
                         local={alimento.local}
                         validade={alimento.validade}
