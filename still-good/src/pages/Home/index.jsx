@@ -14,9 +14,33 @@ const usuarios = Array.isArray(dados.usuarios)
         { ...dados.usuario2, alimentos: dados.alimentos2 ?? [] }
       ].filter(Boolean)
 
+function buscarAlimentosPertoDeVencer(alimentos) {
+    const hoje = new Date()
+    const hojeEmUtc = Date.UTC(hoje.getFullYear(), hoje.getMonth(), hoje.getDate())
+
+    return alimentos
+        .filter((alimento) => {
+            const partesData = /^(\d{4})-(\d{2})-(\d{2})$/.exec(alimento.validade ?? '')
+            if (!partesData) return false
+
+            const [, ano, mes, dia] = partesData
+            const validadeEmUtc = Date.UTC(Number(ano), Number(mes) - 1, Number(dia))
+            const dataValidade = new Date(validadeEmUtc)
+            const dataValida =
+                dataValidade.getUTCFullYear() === Number(ano) &&
+                dataValidade.getUTCMonth() === Number(mes) - 1 &&
+                dataValidade.getUTCDate() === Number(dia)
+            const diasAteVencer = (validadeEmUtc - hojeEmUtc) / 86_400_000
+
+            return dataValida && diasAteVencer >= 0 && diasAteVencer <= 7
+        })
+        .sort((alimentoA, alimentoB) => alimentoA.validade.localeCompare(alimentoB.validade))
+}
+
 export default function Home() {
     const [busca, setBusca] = useState('')
     const [formAberto, setFormAberto] = useState(false)
+    const [alimentoEmEdicao, setAlimentoEmEdicao] = useState(null)
 
     const usuarioLogadoId = localStorage.getItem('usuarioLogadoId') || usuarios[0]?.id
     const usuarioAtual = usuarios.find((usuario) => usuario.id === usuarioLogadoId) || usuarios[0]
@@ -30,6 +54,17 @@ export default function Home() {
     useEffect(() => {
         localStorage.setItem(chaveAlimentos, JSON.stringify(alimentos))
     }, [alimentos, chaveAlimentos])
+
+    useEffect(() => {
+        if (!alimentoEmEdicao) return
+
+        function fecharComEscape(event) {
+            if (event.key === 'Escape') setAlimentoEmEdicao(null)
+        }
+
+        window.addEventListener('keydown', fecharComEscape)
+        return () => window.removeEventListener('keydown', fecharComEscape)
+    }, [alimentoEmEdicao])
 
     function adicionarAlimento(event) {
         event.preventDefault()
@@ -47,6 +82,34 @@ export default function Home() {
         ])
         event.currentTarget.reset()
         setFormAberto(false)
+    }
+
+    function removerAlimento(id) {
+        setAlimentos((atuais) => atuais.filter((alimento) => alimento.id !== id))
+    }
+
+    function iniciarEdicao(alimento) {
+        setFormAberto(false)
+        setAlimentoEmEdicao(alimento)
+    }
+
+    function editarAlimento(event) {
+        event.preventDefault()
+        const formData = new FormData(event.currentTarget)
+
+        setAlimentos((atuais) =>
+            atuais.map((alimento) =>
+                alimento.id === alimentoEmEdicao.id
+                    ? {
+                        ...alimento,
+                        nome: formData.get('nome').trim(),
+                        local: formData.get('local'),
+                        validade: formData.get('validade')
+                    }
+                    : alimento
+            )
+        )
+        setAlimentoEmEdicao(null)
     }
 
     if (!usuarioAtual) {
@@ -73,8 +136,7 @@ export default function Home() {
 
                 <Resumo
                     totalAlimentos={alimentos.length}
-                    pontos={usuarioAtual.stats?.experiencePoints ?? 0}
-                    missoes={usuarioAtual.stats?.completedMissions ?? 0}
+                    alimentosPertoDeVencer={buscarAlimentosPertoDeVencer(alimentos)}
                 />
 
                 <Busca value={busca} onChange={setBusca} />
@@ -114,7 +176,57 @@ export default function Home() {
                     </form>
                 )}
 
-                <Listaalimentos alimentos={alimentos} busca={busca} />
+                {alimentoEmEdicao && (
+                    <div
+                        className="food-modal-backdrop"
+                        onMouseDown={(event) => {
+                            if (event.target === event.currentTarget) setAlimentoEmEdicao(null)
+                        }}
+                    >
+                        <form
+                            className="food-modal"
+                            onSubmit={editarAlimento}
+                            role="dialog"
+                            aria-modal="true"
+                            aria-labelledby="edit-food-title"
+                        >
+                            <h2 id="edit-food-title">Editar alimento</h2>
+                            <label>
+                                Nome do alimento
+                                <input name="nome" type="text" defaultValue={alimentoEmEdicao.nome} required autoFocus />
+                            </label>
+                            <label>
+                                Local de armazenamento
+                                <select name="local" defaultValue={alimentoEmEdicao.local} required>
+                                    <option value="Despensa">Despensa</option>
+                                    <option value="Geladeira">Geladeira</option>
+                                    <option value="Freezer">Freezer</option>
+                                </select>
+                            </label>
+                            <label>
+                                Validade
+                                <input name="validade" type="date" defaultValue={alimentoEmEdicao.validade} required />
+                            </label>
+                            <div className="edit-food-actions">
+                                <button className="save-food-button" type="submit">Salvar alterações</button>
+                                <button
+                                    className="cancel-food-button"
+                                    type="button"
+                                    onClick={() => setAlimentoEmEdicao(null)}
+                                >
+                                    Cancelar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                )}
+
+                <Listaalimentos
+                    alimentos={alimentos}
+                    busca={busca}
+                    onEditar={iniciarEdicao}
+                    onRemover={removerAlimento}
+                />
             </main>
 
             <BottomNav active="home" />

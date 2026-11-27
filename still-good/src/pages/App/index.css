@@ -24,7 +24,7 @@ body{
   }
 }
 .carrega{
-  color: black;
+  color: var(--text-color);
 }
 
 @media (prefers-reduced-motion: no-preference) {

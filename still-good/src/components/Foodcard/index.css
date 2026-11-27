@@ -7,6 +7,35 @@
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
 }
 
+.food-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.food-card-actions button {
+    min-height: 36px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.food-card-edit {
+    border: 1px solid #17491f;
+    background: #17491f;
+    color: #fff;
+}
+
+.food-card-remove {
+    border: 0;
+    background: #a72d55;
+    color: #fff;
+}
+
 .food-card-heading {
     display: flex;
     align-items: center;
@@ -41,12 +70,12 @@
 
 .food-info p {
     margin: 5px 0;
-    color: #68756a;
+    color: var(--muted-text-color);
     font-size: 12px;
     line-height: 1.45;
     overflow-wrap: anywhere;
 }
 
 .food-info p strong {
-    color: #344a37;
+    color: var(--text-color);
 }

@@ -9,6 +9,13 @@
     font-family: "DM Sans", "Trebuchet MS", sans-serif;
 }
 
+:root[data-theme='escuro'] .recipes-page {
+    --recipe-ink: #edf4ed;
+    --recipe-muted: #bcc8be;
+    --recipe-green: #8ebd94;
+    --recipe-orange: #e7a27d;
+}
+
 .recipes-content {
     width: min(1120px, 100%);
     margin: 0 auto;

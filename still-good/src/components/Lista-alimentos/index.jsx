@@ -2,7 +2,12 @@ import Foodcard from '../Foodcard/index.jsx'
 import './index.css'
 import { GiSlicedBread, GiIceCube } from 'react-icons/gi'
 
-export default function Listaalimentos({ alimentos, busca }) {
+export default function Listaalimentos({
+    alimentos,
+    busca,
+    onEditar,
+    onRemover
+}) {
     const alimentosFiltrados = alimentos.filter((alimento) =>
         `${alimento.id} ${alimento.nome} ${alimento.local}`
             .toLocaleLowerCase('pt-BR')
@@ -24,6 +29,8 @@ export default function Listaalimentos({ alimentos, busca }) {
                         nome={alimento.nome}
                         local={alimento.local}
                         validade={alimento.validade}
+                        onEditar={() => onEditar(alimento)}
+                        onRemover={() => onRemover(alimento.id)}
                     />
                 ))}
                 {alimentosFiltrados.length === 0 && (

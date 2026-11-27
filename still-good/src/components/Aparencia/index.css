@@ -33,8 +33,8 @@
     gap: 4px;
     padding: 7px 6px;
     border: none;
-    background: #fff;
-    color: #555;
+    background: var(--card-background);
+    color: var(--text-color);
     font-size: 9px;
     cursor: pointer;
 }

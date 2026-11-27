@@ -4,7 +4,9 @@ export default function Foodcard({
     icone,
     nome,
     local,
-    validade
+    validade,
+    onEditar,
+    onRemover
 }) {
     const validadeFormatada = validade?.includes('-')
         ? validade.split('-').reverse().join('/')
@@ -21,6 +23,14 @@ export default function Foodcard({
             </div>
             <div className="food-info">
                 <p><strong>Validade:</strong> {validadeFormatada}</p>
+            </div>
+            <div className="food-card-actions">
+                <button type="button" className="food-card-edit" onClick={onEditar}>
+                    Editar
+                </button>
+                <button type="button" className="food-card-remove" onClick={onRemover}>
+                    Remover
+                </button>
             </div>
         </article>
     )

@@ -55,7 +55,7 @@
 }
 
 .profile-eyebrow {
-    color: #638367;
+    color: var(--muted-text-color);
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
@@ -70,7 +70,7 @@
 
 .profile-details p {
     margin: 3px 0;
-    color: #607064;
+    color: var(--muted-text-color);
     font-size: 14px;
     overflow-wrap: anywhere;
 }
@@ -78,7 +78,7 @@
 .profile-id {
     display: inline-block;
     margin-top: 8px;
-    color: #78827a;
+    color: var(--muted-text-color);
     font-size: 12px;
 }
 
@@ -150,18 +150,87 @@
     justify-self: start;
 }
 
+.edit-food-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cancel-food-button {
+    min-height: 40px;
+    padding: 9px 14px;
+    border-radius: 10px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cancel-food-button {
+    border: 1px solid var(--border-color);
+    background: var(--card-background);
+    color: var(--text-color);
+}
+
+.food-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.62);
+}
+
+.food-modal {
+    display: grid;
+    gap: 16px;
+    width: min(100%, 460px);
+    max-height: 100%;
+    padding: 24px;
+    overflow-y: auto;
+    background: var(--surface-background);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 18px 56px rgba(0, 0, 0, 0.3);
+}
+
+.food-modal h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.food-modal label {
+    display: grid;
+    gap: 6px;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.food-modal input,
+.food-modal select {
+    width: 100%;
+    min-height: 42px;
+    padding: 9px 11px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--page-background);
+    color: var(--text-color);
+    font: inherit;
+}
+
+.food-modal input:focus,
+.food-modal select:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 1px;
+}
+
 @media (max-width: 480px) {
     .home-content {
         padding-right: 14px;
         padding-left: 14px;
-    }
-
-    .add-food-actions {
-        justify-content: stretch;
-    }
-
-    .add-food-button {
-        width: 100%;
     }
 
     .profile-summary {
@@ -181,5 +250,13 @@
 
     .profile-details p {
         font-size: 12px;
+    }
+
+    .food-modal {
+        padding: 18px;
+    }
+
+    .edit-food-actions {
+        flex-wrap: wrap;
     }
 }
